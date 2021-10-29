@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 import './App.css';
+import { AppRouter } from './routers/AppRouter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+let theme = createTheme({
+    typography: {
+        fontFamily: 'Public Sans',
+    },
+});
 
-export default App;
+//automatically change font size
+theme = responsiveFontSizes(theme);
+
+export const App = () => {
+    return (
+        <div>
+            <ThemeProvider theme={theme}>
+                <AppRouter />
+            </ThemeProvider>
+        </div>
+    );
+};
