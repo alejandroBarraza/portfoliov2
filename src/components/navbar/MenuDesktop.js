@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import { cyan } from '@mui/material/colors';
 
 const styles = {
@@ -16,7 +16,7 @@ const styles = {
 
 export const MenuDesktop = () => {
     return (
-        <Box sx={{ marginLeft: 'auto', display: 'flex' }}>
+        <Box sx={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
             <Box sx={{ display: 'flex' }}>
                 <Typography sx={styles.items} variant='caption'>
                     01.
@@ -34,6 +34,11 @@ export const MenuDesktop = () => {
                     03.
                 </Typography>
                 <Typography variant='caption'>Projects</Typography>
+            </Box>
+            <Box sx={styles.ContainerItems}>
+                <Button variant='outlined' size='sm'>
+                    Cv
+                </Button>
             </Box>
         </Box>
     );
