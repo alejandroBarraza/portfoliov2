@@ -12,7 +12,7 @@ const styles = {
 
 export const DescriptionInfo = () => {
     return (
-        <Container maxWidth='md' sx={{ my: 4 }}>
+        <Box>
             <Box sx={styles.containerDescription}>
                 <Typography variant='subtitle1' sx={{ color: cyan[500], pr: 1 }}>
                     01.
@@ -23,7 +23,7 @@ export const DescriptionInfo = () => {
                 </Typography>
             </Box>
             <Box>
-                <Typography variant='p' sx={{ color: grey[400] }}>
+                <Typography variant='p' sx={{ color: grey[600] }}>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellendus
                     libero est, nihil voluptates error placeat obcaecati fugit praesentium minus
                     impedit iste cum, quasi ab eaque et quis tempore? Ab tempora aperiam enim
@@ -32,6 +32,6 @@ export const DescriptionInfo = () => {
                     consectetur adipisicing elit. Nobis, voluptate.
                 </Typography>
             </Box>
-        </Container>
+        </Box>
     );
 };
