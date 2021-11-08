@@ -1,16 +1,16 @@
 import { Typography, Box, Container } from '@mui/material';
 import React from 'react';
 import { cyan, grey } from '@mui/material/colors';
+import { Social } from '../social/Social';
 
 const styles = {
     boxContainer: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        minHeight: '90vh',
+        height: '90vh',
     },
 };
-// sx={{ fontWeight: 'bold' }}
 export const Info = ({ name }) => {
     return (
         <div>
@@ -28,6 +28,7 @@ export const Info = ({ name }) => {
                     <Typography variant='subtitle1' sx={{ mt: 1, color: grey[400] }}>
                         I'm a software engineer who enjoys building ideas with beautifuls UI 💅.
                     </Typography>
+                    <Social sx={{ alignItems: 'flex-end' }} />
                 </Box>
             </Container>
         </div>
