@@ -18,8 +18,8 @@ export const TechList = () => {
             {stackTech.map((stack, index) =>
                 stack.subtitle ? (
                     <React.Fragment key={stack.id}>
-                        <ListItemButton onClick={() => handleClick(index)}>
-                            <ListItemText primary={stack.title} sx={{ color: grey[600] }} />
+                        <ListItemButton dense onClick={() => handleClick(index)}>
+                            <ListItemText primary={stack.title} sx={{ color: grey[500] }} />
                             {open[index] ? (
                                 <ExpandLess sx={{ color: cyan[500] }} />
                             ) : (
@@ -28,15 +28,15 @@ export const TechList = () => {
                         </ListItemButton>
                         <Collapse in={open[index]} timeout='auto' unmountOnExit>
                             {stack.subtitle.map((lenguage) => (
-                                <ListItem component='div' key={lenguage} sx={{ pl: 4 }}>
+                                <ListItem dense component='div' key={lenguage} sx={{ pl: 4 }}>
                                     <ListItemText primary={lenguage} sx={{ color: cyan[500] }} />
                                 </ListItem>
                             ))}
                         </Collapse>
                     </React.Fragment>
                 ) : (
-                    <ListItem key={stack.id}>
-                        <ListItemText primary={stack.title} sx={{ color: grey[600] }} />
+                    <ListItem dense key={stack.id}>
+                        <ListItemText primary={stack.title} sx={{ color: grey[500] }} />
                     </ListItem>
                 )
             )}

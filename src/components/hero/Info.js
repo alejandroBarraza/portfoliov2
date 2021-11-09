@@ -8,13 +8,13 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        height: '90vh',
+        height: '85vh',
     },
 };
 export const Info = ({ name }) => {
     return (
         <div>
-            <Container>
+            <Container sx={{ position: 'relative' }}>
                 <Box sx={styles.boxContainer}>
                     <Typography sx={{ my: 1 }} color='common.white' variant='h6'>
                         Hi , my name is
@@ -28,7 +28,9 @@ export const Info = ({ name }) => {
                     <Typography variant='subtitle1' sx={{ mt: 1, color: grey[400] }}>
                         I'm a software engineer who enjoys building ideas with beautifuls UI 💅.
                     </Typography>
-                    <Social sx={{ alignItems: 'flex-end' }} />
+                    <Box sx={{ position: 'absolute', bottom: 0, right: 20 }}>
+                        <Social />
+                    </Box>
                 </Box>
             </Container>
         </div>

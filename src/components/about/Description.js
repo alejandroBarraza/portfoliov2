@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Divider, Typography } from '@mui/material';
 import { cyan, grey } from '@mui/material/colors';
 
 const styles = {
@@ -21,9 +21,10 @@ export const DescriptionInfo = () => {
                 <Typography sx={{ fontWeight: 'bold', color: 'common.white' }} variant='h5'>
                     About Me
                 </Typography>
+                <Divider sx={{ backgroundColor: grey[500] }} />
             </Box>
             <Box>
-                <Typography variant='p' sx={{ color: grey[600] }}>
+                <Typography variant='p' sx={{ color: grey[500] }}>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellendus
                     libero est, nihil voluptates error placeat obcaecati fugit praesentium minus
                     impedit iste cum, quasi ab eaque et quis tempore? Ab tempora aperiam enim
