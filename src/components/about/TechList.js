@@ -3,7 +3,7 @@ import { List, ListItemButton, ListItemText, Collapse, ListItem } from '@mui/mat
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { stackTech } from './ListItem';
-import { cyan, grey } from '@mui/material/colors';
+import { cyan } from '@mui/material/colors';
 export const TechList = () => {
     const [open, setOpen] = React.useState({});
     const handleClick = (index) => {
@@ -19,7 +19,7 @@ export const TechList = () => {
                 stack.subtitle ? (
                     <React.Fragment key={stack.id}>
                         <ListItemButton dense onClick={() => handleClick(index)}>
-                            <ListItemText primary={stack.title} sx={{ color: grey[500] }} />
+                            <ListItemText primary={stack.title} sx={{ color: '#8892b0' }} />
                             {open[index] ? (
                                 <ExpandLess sx={{ color: cyan[500] }} />
                             ) : (
@@ -36,7 +36,7 @@ export const TechList = () => {
                     </React.Fragment>
                 ) : (
                     <ListItem dense key={stack.id}>
-                        <ListItemText primary={stack.title} sx={{ color: grey[500] }} />
+                        <ListItemText primary={stack.title} sx={{ color: '#8892b0' }} />
                     </ListItem>
                 )
             )}
