@@ -22,7 +22,7 @@ const styles = {
     },
 };
 
-export const CardProjectMobile = ({ titile, name, desc, tech, link1, link2 }) => {
+export const CardProjectMobile = ({ titleProject, description, githubLink, externalLink }) => {
     return (
         <Container sx={{ my: 16 }}>
             <Box sx={{ minWidth: 275 }}>
@@ -32,19 +32,21 @@ export const CardProjectMobile = ({ titile, name, desc, tech, link1, link2 }) =>
                             Featured Project
                         </Typography>
                         <Typography variant='h5' component='div' sx={styles.titleProject}>
-                            Timer Vanilla Js
+                            {titleProject}
                         </Typography>
 
                         <Typography variant='body2' sx={{ pb: 2, color: '#8892b0' }}>
-                            Halcyon Theme A minimal, dark blue theme for VS Code, Sublime Text,
-                            Atom, iTerm, and more. Available on Visual Studio Marketplace, Package
-                            Control, Atom Package Manager, and npm.
+                            {description}
                         </Typography>
                         <Box sx={{ py: 1 }}>
-                            <Link>
+                            <Link href={githubLink} target='_blank' rel='noreferrer'>
                                 <GitHub sx={{ color: cyan[500] }} />
                             </Link>
-                            <Link sx={{ pl: 1 }}>
+                            <Link
+                                href={externalLink}
+                                target='_blank'
+                                rel='noreferrer'
+                                sx={{ pl: 1 }}>
                                 <LaunchIcon sx={{ color: cyan[500] }} />
                             </Link>
                         </Box>

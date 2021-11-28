@@ -53,7 +53,13 @@ const styles = {
     },
 };
 
-export const CardProjectDekstop = ({ url, tittle, description, techStack, links }) => {
+export const CardProjectDekstop = ({
+    url,
+    titleProject,
+    description,
+    githubLink,
+    externalLink,
+}) => {
     return (
         <Container maxWidth='md'>
             <Box sx={styles.containerDescription}>
@@ -67,12 +73,7 @@ export const CardProjectDekstop = ({ url, tittle, description, techStack, links 
             </Box>
             <Box sx={styles.cardContainer}>
                 <Box sx={styles.picContainer}>
-                    <Box
-                        sx={styles.imageProject}
-                        component='img'
-                        alt='profile-pic'
-                        src='https://www.analyticssteps.com/backend/media/thumbnail/854054/9976175_1625576836_Top-10%20data%20science%20projects%20for%20beginnersArtboard%201.jpg'
-                    />
+                    <Box sx={styles.imageProject} component='img' alt='profile-pic' src={url} />
                 </Box>
 
                 <Box sx={styles.textContainer}>
@@ -80,25 +81,23 @@ export const CardProjectDekstop = ({ url, tittle, description, techStack, links 
                         Featured Project
                     </Typography>
                     <Typography variant='h5' component='div' sx={styles.titleProject}>
-                        Timer Vanilla Js
+                        {titleProject}
                     </Typography>
                     <Card sx={styles.descriptionContainer}>
                         <CardContent>
                             <Typography
                                 variant='subtitle2'
                                 sx={{ textAlign: 'right', color: '#8892b0' }}>
-                                A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
-                                and more. Available on Visual Studio Marketplace, Package Control,
-                                Atom Package Manager, and npm.
+                                {description}
                             </Typography>
                         </CardContent>
                     </Card>
                     <Tech tech={['vscode', 'react', 'Mui']} />
                     <Box sx={styles.linkContainer}>
-                        <Link>
+                        <Link href={githubLink} target='_blank' rel='noreferrer'>
                             <GitHubIcon sx={{ color: 'common.white' }} />
                         </Link>
-                        <Link sx={{ pl: 1 }}>
+                        <Link href={externalLink} target='_blank' rel='noreferrer' sx={{ pl: 1 }}>
                             <LaunchIcon sx={{ color: 'common.white' }} />
                         </Link>
                     </Box>
