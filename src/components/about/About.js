@@ -1,9 +1,8 @@
 import React from 'react';
-import { Container, Divider, Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import { DescriptionInfo } from './Description';
 import { Picture } from './Picture';
 import { TechList } from './TechList';
-import { grey } from '@mui/material/colors';
 export const About = () => {
     return (
         <Container maxWidth='md' sx={{ my: 8 }}>

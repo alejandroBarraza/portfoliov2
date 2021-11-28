@@ -3,8 +3,7 @@ import React from 'react';
 import { About } from '../components/about/About';
 import { Hero } from '../components/hero/Hero';
 import { Navbar } from '../components/navbar/Navbar';
-import { CardProjectDekstop } from '../components/projects/CardProjectDekstop';
-// import { CardProjectMobile } from '../components/projects/CardProjectMobile';
+import { ProjectsView } from '../components/projects/ProjectsView';
 
 export const Home = () => {
     return (
@@ -12,8 +11,9 @@ export const Home = () => {
             <Navbar />
             <Hero />
             <About />
-            {/* <CardProjectMobile /> */}
-            <CardProjectDekstop />
+            <ProjectsView />
+            <ProjectsView />
+            <ProjectsView />
         </Container>
     );
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Divider, Typography } from '@mui/material';
 import { cyan, grey } from '@mui/material/colors';
-import { Title } from '../utils/Title';
 
 const styles = {
     containerDescription: {

@@ -1,6 +1,9 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
-import { cyan, grey } from '@mui/material/colors';
+import { Box, Typography, Container, CardContent, Card, Link } from '@mui/material';
+import { cyan } from '@mui/material/colors';
+import { Tech } from './Tech';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 const styles = {
     containerDescription: {
@@ -18,21 +21,41 @@ const styles = {
     },
     textContainer: {
         width: '50%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-end',
     },
 
     imageProject: {
         borderRadius: '4px',
-        maxWidth: '100%',
-        filter: 'brightness(40%)',
+        maxWidth: '120%',
+        minHeight: '100%',
+        filter: 'brightness(60%)',
         transition: 'filter 0.3s linear',
         '&:hover': {
             filter: 'none',
         },
     },
+    titleProject: {
+        color: 'common.white',
+        fontWeight: 'bold',
+        pt: 1,
+        pb: 2,
+    },
+    descriptionContainer: {
+        background: 'var(--blue-color-secondary)',
+        borderRadius: '10px',
+        backdropFilter: 'blur( 4px )',
+        zIndex: 2,
+    },
+    linkContainer: {
+        display: 'flex',
+    },
 };
-export const CardProjectDekstop = () => {
+
+export const CardProjectDekstop = ({ url, tittle, description, techStack, links }) => {
     return (
-        <>
+        <Container maxWidth='md'>
             <Box sx={styles.containerDescription}>
                 <Typography variant='subtitle1' sx={{ color: cyan[500], pr: 1 }}>
                     01.
@@ -48,26 +71,39 @@ export const CardProjectDekstop = () => {
                         sx={styles.imageProject}
                         component='img'
                         alt='profile-pic'
-                        src='https://content.fortune.com/wp-content/uploads/2018/07/gettyimages-961697338.jpg'
+                        src='https://www.analyticssteps.com/backend/media/thumbnail/854054/9976175_1625576836_Top-10%20data%20science%20projects%20for%20beginnersArtboard%201.jpg'
                     />
                 </Box>
 
                 <Box sx={styles.textContainer}>
                     <Typography sx={{ fontSize: 14, color: cyan[500] }} gutterBottom>
-                        Projects 1
+                        Featured Project
                     </Typography>
                     <Typography variant='h5' component='div' sx={styles.titleProject}>
                         Timer Vanilla Js
                     </Typography>
-                    <Box>
-                        <Typography variant='body1' color='common.white'>
-                            A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
-                            more. Available on Visual Studio Marketplace, Package Control, Atom
-                            Package Manager, and npm.
-                        </Typography>
+                    <Card sx={styles.descriptionContainer}>
+                        <CardContent>
+                            <Typography
+                                variant='subtitle2'
+                                sx={{ textAlign: 'right', color: '#8892b0' }}>
+                                A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
+                                and more. Available on Visual Studio Marketplace, Package Control,
+                                Atom Package Manager, and npm.
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                    <Tech tech={['vscode', 'react', 'Mui']} />
+                    <Box sx={styles.linkContainer}>
+                        <Link>
+                            <GitHubIcon sx={{ color: 'common.white' }} />
+                        </Link>
+                        <Link sx={{ pl: 1 }}>
+                            <LaunchIcon sx={{ color: 'common.white' }} />
+                        </Link>
                     </Box>
                 </Box>
             </Box>
-        </>
+        </Container>
     );
 };
