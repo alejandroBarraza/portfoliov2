@@ -6,6 +6,7 @@ const styles = {
         display: 'flex',
     },
     textContainer: {
+        pt: 'auto',
         display: 'flex',
         justifyContent: 'flex-end',
         color: '#8892b0',

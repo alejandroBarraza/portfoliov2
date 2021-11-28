@@ -3,16 +3,15 @@ import { Box } from '@mui/material';
 
 const styles = {
     imageContainer: {
-        pt: 6,
         display: 'flex',
         justifyContent: 'center',
+        pl: { xs: 0, md: 4 },
     },
     imageProfile: {
         borderRadius: '4px',
         height: '300',
-        width: '300',
+        width: '100%',
         maxHeight: { xs: 300, md: 300 },
-        maxWidth: { xs: 300, md: 300 },
         filter: 'brightness(40%)',
         transition: 'filter 0.5s linear',
         '&:hover': {
