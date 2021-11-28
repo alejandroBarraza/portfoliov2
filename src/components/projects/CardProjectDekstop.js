@@ -6,17 +6,14 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 
 const styles = {
-    containerDescription: {
-        display: 'flex',
-        alignItems: 'center',
-        py: 2,
-        mt: 20,
-    },
     cardContainer: {
         display: 'flex',
         flexDirection: 'row',
+        mb: 10,
+        alignItems: 'stretch',
     },
     picContainer: {
+        display: 'flex',
         width: '50%',
     },
     textContainer: {
@@ -61,48 +58,37 @@ export const CardProjectDekstop = ({
     externalLink,
 }) => {
     return (
-        <Container maxWidth='md'>
-            <Box sx={styles.containerDescription}>
-                <Typography variant='subtitle1' sx={{ color: cyan[500], pr: 1 }}>
-                    01.
-                </Typography>
-
-                <Typography sx={{ fontWeight: 'bold', color: 'common.white' }} variant='h5'>
-                    Some Things I’ve Built
-                </Typography>
+        <Box sx={styles.cardContainer}>
+            <Box sx={styles.picContainer}>
+                <Box sx={styles.imageProject} component='img' alt='profile-pic' src={url} />
             </Box>
-            <Box sx={styles.cardContainer}>
-                <Box sx={styles.picContainer}>
-                    <Box sx={styles.imageProject} component='img' alt='profile-pic' src={url} />
-                </Box>
 
-                <Box sx={styles.textContainer}>
-                    <Typography sx={{ fontSize: 14, color: cyan[500] }} gutterBottom>
-                        Featured Project
-                    </Typography>
-                    <Typography variant='h5' component='div' sx={styles.titleProject}>
-                        {titleProject}
-                    </Typography>
-                    <Card sx={styles.descriptionContainer}>
-                        <CardContent>
-                            <Typography
-                                variant='subtitle2'
-                                sx={{ textAlign: 'right', color: '#8892b0' }}>
-                                {description}
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                    <Tech tech={['vscode', 'react', 'Mui']} />
-                    <Box sx={styles.linkContainer}>
-                        <Link href={githubLink} target='_blank' rel='noreferrer'>
-                            <GitHubIcon sx={{ color: 'common.white' }} />
-                        </Link>
-                        <Link href={externalLink} target='_blank' rel='noreferrer' sx={{ pl: 1 }}>
-                            <LaunchIcon sx={{ color: 'common.white' }} />
-                        </Link>
-                    </Box>
+            <Box sx={styles.textContainer}>
+                <Typography sx={{ fontSize: 14, color: cyan[500] }} gutterBottom>
+                    Featured Project
+                </Typography>
+                <Typography variant='h5' component='div' sx={styles.titleProject}>
+                    {titleProject}
+                </Typography>
+                <Card sx={styles.descriptionContainer}>
+                    <CardContent>
+                        <Typography
+                            variant='subtitle2'
+                            sx={{ textAlign: 'right', color: '#8892b0' }}>
+                            {description}
+                        </Typography>
+                    </CardContent>
+                </Card>
+                <Tech tech={['vscode', 'react', 'Mui']} />
+                <Box sx={styles.linkContainer}>
+                    <Link href={githubLink} target='_blank' rel='noreferrer'>
+                        <GitHubIcon sx={{ color: 'common.white' }} />
+                    </Link>
+                    <Link href={externalLink} target='_blank' rel='noreferrer' sx={{ pl: 1 }}>
+                        <LaunchIcon sx={{ color: 'common.white' }} />
+                    </Link>
                 </Box>
             </Box>
-        </Container>
+        </Box>
     );
 };

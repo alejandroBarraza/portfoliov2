@@ -24,35 +24,29 @@ const styles = {
 
 export const CardProjectMobile = ({ titleProject, description, githubLink, externalLink }) => {
     return (
-        <Container sx={{ my: 16 }}>
-            <Box sx={{ minWidth: 275 }}>
-                <Card sx={styles.cardContainer}>
-                    <CardContent>
-                        <Typography sx={{ fontSize: 14, color: cyan[500] }} gutterBottom>
-                            Featured Project
-                        </Typography>
-                        <Typography variant='h5' component='div' sx={styles.titleProject}>
-                            {titleProject}
-                        </Typography>
+        <Box sx={{ minWidth: 275, mb: 4 }}>
+            <Card sx={styles.cardContainer}>
+                <CardContent>
+                    <Typography sx={{ fontSize: 14, color: cyan[500] }} gutterBottom>
+                        Featured Project
+                    </Typography>
+                    <Typography variant='h5' component='div' sx={styles.titleProject}>
+                        {titleProject}
+                    </Typography>
 
-                        <Typography variant='body2' sx={{ pb: 2, color: '#8892b0' }}>
-                            {description}
-                        </Typography>
-                        <Box sx={{ py: 1 }}>
-                            <Link href={githubLink} target='_blank' rel='noreferrer'>
-                                <GitHub sx={{ color: cyan[500] }} />
-                            </Link>
-                            <Link
-                                href={externalLink}
-                                target='_blank'
-                                rel='noreferrer'
-                                sx={{ pl: 1 }}>
-                                <LaunchIcon sx={{ color: cyan[500] }} />
-                            </Link>
-                        </Box>
-                    </CardContent>
-                </Card>
-            </Box>
-        </Container>
+                    <Typography variant='body2' sx={{ pb: 2, color: '#8892b0' }}>
+                        {description}
+                    </Typography>
+                    <Box sx={{ py: 1 }}>
+                        <Link href={githubLink} target='_blank' rel='noreferrer'>
+                            <GitHub sx={{ color: cyan[500] }} />
+                        </Link>
+                        <Link href={externalLink} target='_blank' rel='noreferrer' sx={{ pl: 1 }}>
+                            <LaunchIcon sx={{ color: cyan[500] }} />
+                        </Link>
+                    </Box>
+                </CardContent>
+            </Card>
+        </Box>
     );
 };
