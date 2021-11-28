@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Divider, Typography } from '@mui/material';
 import { cyan, grey } from '@mui/material/colors';
+import { Title } from '../utils/Title';
 
 const styles = {
     containerDescription: {
@@ -24,7 +25,7 @@ export const DescriptionInfo = () => {
                 <Divider sx={{ backgroundColor: grey[500] }} />
             </Box>
             <Box>
-                <Typography variant='p' sx={{ color: grey[500] }}>
+                <Typography variant='p' sx={{ color: grey[500], lineHeight: '1.5rem' }}>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim repellendus
                     libero est, nihil voluptates error placeat obcaecati fugit praesentium minus
                     impedit iste cum, quasi ab eaque et quis tempore? Ab tempora aperiam enim
