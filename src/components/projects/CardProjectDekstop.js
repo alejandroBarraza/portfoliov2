@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container, CardContent, Card, Link } from '@mui/material';
+import { Box, Typography, CardContent, Card, Link } from '@mui/material';
 import { cyan } from '@mui/material/colors';
 import { Tech } from './Tech';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -74,7 +74,8 @@ export const CardProjectDekstop = ({
                     <CardContent>
                         <Typography
                             variant='subtitle2'
-                            sx={{ textAlign: 'right', color: '#8892b0' }}>
+                            sx={{ textAlign: 'right', color: '#8892b0' }}
+                        >
                             {description}
                         </Typography>
                     </CardContent>

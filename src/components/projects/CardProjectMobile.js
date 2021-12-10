@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Card, CardContent, Typography, Container, Link } from '@mui/material';
+import { Box, Card, CardContent, Typography, Link } from '@mui/material';
 import { GitHub } from '@mui/icons-material';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { cyan } from '@mui/material/colors';
