@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItem, ListItemText, Typography } from '@mui/material';
+import { List, ListItem, Typography } from '@mui/material';
 import { styled } from '@mui/material';
 const styles = {
     container: {
@@ -8,20 +8,21 @@ const styles = {
     textContainer: {
         pt: 'auto',
         display: 'flex',
-        justifyContent: 'flex-end',
         color: '#8892b0',
     },
 };
 
 const ListItemNoPadding = styled(ListItem)(`
   padding: 0;
-
   padding-left: 8px;
   padding-top: 8px;
   
 `);
 
-export const Tech = ({ tech }) => {
+export const Tech = ({ tech, justify }) => {
+    justify
+        ? (styles.textContainer.justifyContent = justify)
+        : (styles.textContainer.justifyContent = 'flex-end');
     return (
         <List sx={styles.container}>
             {tech.map((item, index) => (
@@ -31,4 +32,11 @@ export const Tech = ({ tech }) => {
             ))}
         </List>
     );
+};
+
+Tech.defaultProps = {
+    textContainer: {
+        ...styles.textContainer,
+        justifyContent: 'flex-end',
+    },
 };

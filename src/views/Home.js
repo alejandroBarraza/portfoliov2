@@ -3,6 +3,7 @@ import React from 'react';
 import { About } from '../components/about/About';
 import { Hero } from '../components/hero/Hero';
 import { Navbar } from '../components/navbar/Navbar';
+import { SecondProjectView } from '../components/other/SecondProjectView';
 import { ProjectsView } from '../components/projects/ProjectsView';
 import { Title } from '../components/utils/Title';
 
@@ -48,6 +49,10 @@ export const Home = () => {
                     githubLink='https://github.com/'
                     externalLink='https://www.google.com/'
                 />
+            </Container>
+            <Container maxWidth='md'>
+                <Title title='Some Other Projects' justify={'center'} padding={'0 0 4rem 0 '} />
+                <SecondProjectView />
             </Container>
         </Container>
     );
