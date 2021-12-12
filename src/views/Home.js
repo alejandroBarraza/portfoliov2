@@ -1,6 +1,7 @@
 import { Container } from '@mui/material';
 import React from 'react';
 import { About } from '../components/about/About';
+import { Contact } from '../components/contact/Contact';
 import { Hero } from '../components/hero/Hero';
 import { Navbar } from '../components/navbar/Navbar';
 import { SecondProjectView } from '../components/other/SecondProjectView';
@@ -51,8 +52,15 @@ export const Home = () => {
                 />
             </Container>
             <Container maxWidth='md'>
-                <Title title='Some Other Projects' justify={'center'} padding={'0 0 4rem 0 '} />
+                <Title
+                    title='Some Other Projects'
+                    custom={{ justifyContent: 'center', padding: '0 0 2rem 0 ' }}
+                />
                 <SecondProjectView />
+            </Container>
+
+            <Container maxWidth='md'>
+                <Contact />
             </Container>
         </Container>
     );

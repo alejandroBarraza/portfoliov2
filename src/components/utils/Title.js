@@ -7,19 +7,14 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         mt: 20,
+        mb: 2,
+        justifyContent: 'flex-start',
     },
 };
 
-export const Title = ({ number, title, justify, padding }) => {
-    justify
-        ? (styles.titleContainer.justifyContent = justify)
-        : (styles.titleContainer.justifyContent = 'flex-start');
-
-    padding
-        ? (styles.titleContainer.padding = padding)
-        : (styles.titleContainer.padding = '2rem 0');
+export const Title = ({ number, title, custom }) => {
     return (
-        <Box sx={styles.titleContainer}>
+        <Box sx={{ ...styles.titleContainer, ...custom }}>
             {number && (
                 <Typography variant='subtitle1' sx={{ color: cyan[500], pr: 1 }}>
                     {number}
@@ -35,7 +30,10 @@ export const Title = ({ number, title, justify, padding }) => {
 
 Title.defaultProps = {
     titleContainer: {
-        ...styles.titleContainer,
+        display: 'flex',
+        alignItems: 'center',
+        mt: 20,
+        mb: 2,
         justifyContent: 'flex-start',
     },
 };
