@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { ButtonCustom } from '../utils/ButtonCustom';
-import { Title } from '../utils/Title';
 export const Contact = () => {
     return (
         <Box sx={{ mt: 16, textAlign: 'center' }}>
