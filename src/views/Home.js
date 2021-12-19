@@ -13,11 +13,11 @@ export const Home = () => {
         <Container>
             <Navbar />
             <Hero />
-            <Container maxWidth='md'>
+            <Container maxWidth='md' id='aboutMe'>
                 <Title number='01.' title='About Me' />
                 <About />
             </Container>
-            <Container maxWidth='md'>
+            <Container maxWidth='md' id='projects'>
                 <Title number='02.' title='Some Things I’ve Built' />
                 <ProjectsView
                     url={
@@ -59,7 +59,7 @@ export const Home = () => {
                 <SecondProjectView />
             </Container>
 
-            <Container maxWidth='md'>
+            <Container maxWidth='md' id='contact'>
                 <Contact />
             </Container>
         </Container>
