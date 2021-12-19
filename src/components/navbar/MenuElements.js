@@ -47,7 +47,8 @@ export const MenuElements = ({ handleClose, anchorEl }) => {
                     horizontal: 'right',
                 }}
                 open={Boolean(anchorEl)}
-                onClose={handleClose}>
+                onClose={handleClose}
+            >
                 <MenuItem onClick={handleClose}>
                     <CloseRoundedIcon sx={{ ml: 'auto' }} />
                 </MenuItem>
@@ -56,13 +57,14 @@ export const MenuElements = ({ handleClose, anchorEl }) => {
                     <Typography sx={{ pr: 1, color: cyan[500] }}>01.</Typography>
                     <Typography> About</Typography>
                 </MenuItem>
+
                 <MenuItem onClick={handleClose}>
                     <Typography sx={{ pr: 1, color: cyan[500] }}>02.</Typography>
-                    <Typography>Experience</Typography>
+                    <Typography>Projects</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                     <Typography sx={{ pr: 1, color: cyan[500] }}>03.</Typography>
-                    <Typography>Projects</Typography>
+                    <Typography>Contact</Typography>
                 </MenuItem>
             </Menu>
         </div>
