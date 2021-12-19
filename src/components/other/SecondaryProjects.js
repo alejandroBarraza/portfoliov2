@@ -1,4 +1,4 @@
-import { CardContent, Typography, Card, Box } from '@mui/material';
+import { CardContent, Typography, Card, Box, IconButton } from '@mui/material';
 import React from 'react';
 import FolderRoundedIcon from '@mui/icons-material/FolderRounded';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -35,8 +35,18 @@ export const SecondaryProjects = () => {
                     <Box>
                         <FolderRoundedIcon fontSize='large' />
                     </Box>
-                    <LaunchIcon sx={{ ml: 'auto' }} />
-                    <GitHubIcon sx={{ ml: 1 }} />
+                    <IconButton
+                        href='https://www.google.com'
+                        target='_blank'
+                        rel='noreferrer'
+                        sx={{ ml: 'auto' }}
+                    >
+                        <LaunchIcon sx={{ color: 'white' }} />
+                    </IconButton>
+
+                    <IconButton href='https://www.google.com' target='_blank' rel='noreferrer'>
+                        <GitHubIcon sx={{ color: 'white' }} />
+                    </IconButton>
                 </Box>
                 <Box sx={styles.textBox}>
                     <Typography variant='h5'>time to have more fun</Typography>
