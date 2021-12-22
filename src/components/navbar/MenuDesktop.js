@@ -4,12 +4,25 @@ import { cyan } from '@mui/material/colors';
 import { Link as LinkScroll } from 'react-scroll';
 
 const styles = {
-    ContainerItems: {
+    ContainerPrimaryLinks: {
+        display: 'flex',
+        cursor: 'pointer',
+        transition: 'color 0.3s ease-in-out',
+        '&:hover': {
+            color: cyan[500],
+        },
+    },
+    ContainerLinks: {
         display: 'flex',
         ml: 2,
         textAlign: 'center',
+        cursor: 'pointer',
+        transition: 'color 0.3s ease-in-out',
+        '&:hover': {
+            color: cyan[500],
+        },
     },
-    items: {
+    typo: {
         mr: 0.8,
         color: cyan[500],
     },
@@ -18,7 +31,7 @@ const styles = {
 export const MenuDesktop = () => {
     return (
         <Box sx={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
-            <Box sx={{ display: 'flex' }}>
+            <Box sx={styles.ContainerPrimaryLinks}>
                 <LinkScroll
                     activeClass='active'
                     to='aboutMe'
@@ -27,14 +40,14 @@ export const MenuDesktop = () => {
                     offset={-70}
                     duration={500}
                 >
-                    <Typography sx={styles.items} variant='caption'>
+                    <Typography sx={styles.typo} variant='caption'>
                         01.
                     </Typography>
                     <Typography variant='caption'>About</Typography>
                 </LinkScroll>
             </Box>
 
-            <Box sx={styles.ContainerItems}>
+            <Box sx={styles.ContainerLinks}>
                 <LinkScroll
                     activeClass='active'
                     to='projects'
@@ -43,13 +56,13 @@ export const MenuDesktop = () => {
                     offset={-70}
                     duration={700}
                 >
-                    <Typography sx={styles.items} variant='caption'>
+                    <Typography sx={styles.typo} variant='caption'>
                         02.
                     </Typography>
                     <Typography variant='caption'>Projects</Typography>
                 </LinkScroll>
             </Box>
-            <Box sx={styles.ContainerItems}>
+            <Box sx={styles.ContainerLinks}>
                 <LinkScroll
                     activeClass='active'
                     to='contact'
@@ -58,14 +71,14 @@ export const MenuDesktop = () => {
                     offset={-70}
                     duration={1100}
                 >
-                    <Typography sx={styles.items} variant='caption'>
+                    <Typography sx={styles.typo} variant='caption'>
                         03.
                     </Typography>
                     <Typography variant='caption'>Contact</Typography>
                 </LinkScroll>
             </Box>
 
-            <Box sx={styles.ContainerItems}>
+            <Box sx={styles.ContainerLinks}>
                 <Button variant='outlined' size='sm'>
                     Cv
                 </Button>

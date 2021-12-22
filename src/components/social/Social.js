@@ -1,17 +1,43 @@
 import React from 'react';
-import { SpeedDial, SpeedDialIcon, SpeedDialAction } from '@mui/material';
+import { SpeedDial, SpeedDialIcon, SpeedDialAction, IconButton } from '@mui/material';
 import { cyan } from '@mui/material/colors';
-
-import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
-import SaveIcon from '@mui/icons-material/Save';
-import PrintIcon from '@mui/icons-material/Print';
-import ShareIcon from '@mui/icons-material/Share';
+import { LinkedIn } from '@mui/icons-material';
+import { Instagram } from '@mui/icons-material';
+import GitHub from '@mui/icons-material/GitHub';
 
 const actions = [
-    { icon: <FileCopyIcon />, name: 'Copy' },
-    { icon: <SaveIcon />, name: 'Save' },
-    { icon: <PrintIcon />, name: 'Print' },
-    { icon: <ShareIcon />, name: 'Share' },
+    {
+        icon: (
+            <IconButton target='_blank' rel='noreferrer' href='https://github.com/alejandroBarraza'>
+                <GitHub />
+            </IconButton>
+        ),
+        name: 'GitHub',
+    },
+    {
+        icon: (
+            <IconButton
+                target='_blank'
+                rel='noreferrer'
+                href='https://www.linkedin.com/in/alejandro-barraza-5849a716a/'
+            >
+                <LinkedIn />
+            </IconButton>
+        ),
+        name: 'Linkedin',
+    },
+    {
+        icon: (
+            <IconButton
+                target='_blank'
+                rel='noreferrer'
+                href='https://www.instagram.com/alejnbarrazaa/?hl=es'
+            >
+                <Instagram />
+            </IconButton>
+        ),
+        name: 'Instagram',
+    },
 ];
 export const Social = () => {
     return (
@@ -21,10 +47,10 @@ export const Social = () => {
                 style: { backgroundColor: cyan[500] },
             }}
             ariaLabel='SpeedDial basic example'
-            icon={<SpeedDialIcon />}>
+            icon={<SpeedDialIcon />}
+        >
             {actions.map((action) => (
                 <SpeedDialAction
-                    key={action.name}
                     icon={action.icon}
                     tooltipTitle={action.name}
                     sx={{ margin: '0 0 8px 0' }}
