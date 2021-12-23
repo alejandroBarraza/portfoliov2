@@ -2,32 +2,38 @@ import React from 'react';
 import { Box } from '@mui/material';
 
 const styles = {
-    imageContainer: {
+    container: {
         display: 'flex',
         justifyContent: 'center',
-        pl: { xs: 0, md: 4 },
     },
     imageProfile: {
         borderRadius: '4px',
         height: '300',
         width: '100%',
-        maxHeight: { xs: 300, md: 300 },
-        filter: 'brightness(40%)',
-        transition: 'filter 0.5s linear',
-        '&:hover': {
-            filter: 'none',
-        },
+        maxHeight: { xs: 300, md: 200 },
+    },
+    circleContainer: {
+        backdropFilter: 'blur(4px)',
+        display: 'flex',
+        justifyContent: 'center',
+        height: '200px',
+        width: '200px',
+        backgroundColor: 'rgba(255, 255, 255, .15)',
+        borderRadius: '50%',
+        boxShadow: '0px 0px 20px rgba(17,214,214,0.75)',
     },
 };
 export const Picture = () => {
     return (
-        <Box sx={styles.imageContainer}>
-            <Box
-                component='img'
-                sx={styles.imageProfile}
-                alt='profile-pic'
-                src='https://content.fortune.com/wp-content/uploads/2018/07/gettyimages-961697338.jpg'
-            />
+        <Box sx={styles.container}>
+            <Box sx={styles.circleContainer}>
+                <Box
+                    component='img'
+                    sx={styles.imageProfile}
+                    alt='profile-pic'
+                    src='/profile2.png'
+                />
+            </Box>
         </Box>
     );
 };

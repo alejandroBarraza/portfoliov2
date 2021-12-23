@@ -24,7 +24,7 @@ export const Navbar = () => {
     };
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, position: 'sticky', top: 0, zIndex: 3 }}>
             <AppBar
                 position='static'
                 sx={{ backgroundColor: 'var(--blue-color)', boxShadow: 'none', display: 'flex' }}
