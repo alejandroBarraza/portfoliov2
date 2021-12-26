@@ -13,10 +13,15 @@ const styles = {
         borderRadius: '10px',
         border: '1px solid #1E4976',
         backdropFilter: 'blur( 4px )',
+        transition: 'transform 0.2s linear',
+
+        '&:hover': {
+            transform: 'scale3d(1.05, 1.05, 1)',
+        },
     },
     cardOverContainer: {
-        backgroundColor: 'rgba(0,30,61,0.8)',
-        // brightness: '0.8',
+        backgroundColor: 'rgba(0,0,0,0.7)',
+        zIndex: '2',
     },
     titleProject: {
         color: 'common.white',

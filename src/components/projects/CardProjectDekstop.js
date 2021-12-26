@@ -61,11 +61,12 @@ export const CardProjectDekstop = ({
     description,
     githubLink,
     externalLink,
+    tech,
 }) => {
     return (
         <Box sx={styles.cardContainer}>
             <Box sx={styles.picContainer}>
-                <Link href={url} target='_blank' rel='noreferrer'>
+                <Link href={externalLink} target='_blank' rel='noreferrer'>
                     <Box sx={styles.imageProject} component='img' alt='profile-pic' src={url} />
                 </Link>
             </Box>
@@ -87,7 +88,7 @@ export const CardProjectDekstop = ({
                         </Typography>
                     </CardContent>
                 </Card>
-                <Tech tech={['vscode', 'react', 'Mui']} />
+                <Tech tech={tech} />
                 <Box sx={styles.linkContainer}>
                     <Link href={githubLink} target='_blank' rel='noreferrer'>
                         <GitHubIcon sx={{ color: 'common.white' }} />

@@ -5,6 +5,7 @@ const styles = {
     container: {
         display: 'flex',
         justifyContent: 'center',
+        pt: { xs: 4, md: 0 },
     },
     imageProfile: {
         borderRadius: '4px',
@@ -21,7 +22,7 @@ const styles = {
         backgroundColor: 'rgba(255, 255, 255, .15)',
         borderRadius: '50%',
         boxShadow: '0px 0px 20px rgba(17,214,214,0.75)',
-        transition: 'box-shadow 0.5s linear',
+        transition: 'box-shadow 0.5s ease',
         '&:hover': {
             boxShadow: '0px 0px 40px rgba(255,0,155,0.75)',
         },
