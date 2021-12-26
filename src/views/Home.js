@@ -20,15 +20,12 @@ export const Home = () => {
             <Container maxWidth='md' id='projects'>
                 <Title number='02.' title='Some Things I’ve Built' />
                 <ProjectsView
-                    url={
-                        'https://www.analyticssteps.com/backend/media/thumbnail/854054/9976175_1625576836_Top-10%20data%20science%20projects%20for%20beginnersArtboard%201.jpg'
-                    }
-                    titleProject={'Project 1'}
-                    description='A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
-                and more. Available on Visual Studio Marketplace, Package Control,
-                Atom Package Manager, and npm'
+                    url={'/headlessCms.png'}
+                    titleProject={'Aun te espero'}
+                    description='A minimal SPA App. Built with Headless CMS Strapi, React and Graphql for a non profit company Mutual.'
                     githubLink='https://github.com/'
-                    externalLink='https://www.google.com/'
+                    externalLink='https://www.aunteespero.cl/'
+                    tech={['React', 'ApolloClient', 'Mui', 'Strapi', 'Graphql', 'PostgreSQL']}
                 />
                 <ProjectsView
                     url={
@@ -36,19 +33,21 @@ export const Home = () => {
                     }
                     titleProject={'Project 2'}
                     description='A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
-                and more. Available on Visual Studio Marketplace, Package Control,
-                Atom Package Manager, and npm'
+                    and more. Available on Visual Studio Marketplace, Package Control,
+                    Atom Package Manager, and npm'
                     githubLink='https://github.com/'
                     externalLink='https://www.google.com/'
+                    tech={['React', 'Strapi', 'pene']}
                 />
                 <ProjectsView
                     url={'https://blog.hotmart.com/blog/2018/04/BLOG_data-science-670x419-1.png'}
                     titleProject={'Project 3'}
                     description='A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
-                and more. Available on Visual Studio Marketplace, Package Control,
-                Atom Package Manager, and npm'
+                    and more. Available on Visual Studio Marketplace, Package Control,
+                    Atom Package Manager, and npm'
                     githubLink='https://github.com/'
                     externalLink='https://www.google.com/'
+                    tech={['React', 'Strapi', 'pene']}
                 />
             </Container>
             <Container maxWidth='md'>
