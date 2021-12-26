@@ -44,6 +44,11 @@ const styles = {
         borderRadius: '10px',
         backdropFilter: 'blur( 4px )',
         zIndex: 2,
+        transition: 'transform 0.2s linear',
+
+        '&:hover': {
+            transform: 'scale3d(1.05, 1, 1)',
+        },
     },
     linkContainer: {
         display: 'flex',
