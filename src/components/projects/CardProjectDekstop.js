@@ -60,7 +60,9 @@ export const CardProjectDekstop = ({
     return (
         <Box sx={styles.cardContainer}>
             <Box sx={styles.picContainer}>
-                <Box sx={styles.imageProject} component='img' alt='profile-pic' src={url} />
+                <Link href={url} target='_blank' rel='noreferrer'>
+                    <Box sx={styles.imageProject} component='img' alt='profile-pic' src={url} />
+                </Link>
             </Box>
 
             <Box sx={styles.textContainer}>
