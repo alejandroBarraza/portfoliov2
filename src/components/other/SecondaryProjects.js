@@ -11,6 +11,12 @@ const styles = {
         borderRadius: '10px',
         border: '1px solid #1E4976',
         backdropFilter: 'blur( 4px )',
+        transition: 'transform 0.2s linear, box-shadow 0.2s linear',
+
+        '&:hover': {
+            transform: 'scale3d(1.05, 1.05, 1)',
+            boxShadow: '1px 1px 6px 1px #055E70',
+        },
     },
 
     headerBox: {
