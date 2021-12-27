@@ -13,6 +13,9 @@ const styles = {
         border: '1px solid #1E4976',
         backdropFilter: 'blur( 4px )',
         transition: 'transform 0.2s linear, box-shadow 0.2s linear',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
 
         '&:hover': {
             transform: 'scale3d(1.05, 1.05, 1)',
@@ -60,7 +63,9 @@ export const SecondaryProjects = ({ title, description, tech, githubLink, extern
                         {description}
                     </Typography>
                 </Box>
-                <Tech tech={tech} justify={'flex-start'} />
+                <Box sx={{ mt: 'auto' }}>
+                    <Tech tech={tech} justify={'flex-start'} />
+                </Box>
             </CardContent>
         </Card>
     );
