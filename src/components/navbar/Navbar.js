@@ -7,7 +7,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import { useTheme } from '@mui/material/styles';
 import { MenuElements } from './MenuElements';
 import { MenuDesktop } from './MenuDesktop';
-
+import { Link as LinkScroll } from 'react-scroll';
 export const Navbar = () => {
     const theme = useTheme();
     const screeSize = useMediaQuery(theme.breakpoints.up('md'));
@@ -30,7 +30,16 @@ export const Navbar = () => {
                 sx={{ backgroundColor: 'var(--blue-color)', boxShadow: 'none', display: 'flex' }}
             >
                 <Toolbar>
-                    <CodeIcon />
+                    <LinkScroll
+                        activeClass='active'
+                        to='home'
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        <CodeIcon sx={{ cursor: 'pointer' }} />
+                    </LinkScroll>
                     {screeSize ? (
                         <MenuDesktop />
                     ) : (

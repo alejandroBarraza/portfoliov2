@@ -5,7 +5,7 @@ import { Info } from './Info';
 
 export const Hero = () => {
     return (
-        <Box sx={{ minHeight: '100%' }}>
+        <Box sx={{ minHeight: '100%' }} id='home'>
             <Info name='Ale Barraza' />
         </Box>
     );

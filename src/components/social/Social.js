@@ -51,6 +51,7 @@ export const Social = () => {
         >
             {actions.map((action) => (
                 <SpeedDialAction
+                    key={action.name}
                     icon={action.icon}
                     tooltipTitle={action.name}
                     sx={{ margin: '0 0 8px 0' }}
