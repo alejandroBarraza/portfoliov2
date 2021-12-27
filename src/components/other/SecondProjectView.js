@@ -25,10 +25,11 @@ export const SecondProjectView = () => {
             </Grid>
             <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
                 <SecondaryProjects
-                    title='Neumorphism Timer'
-                    description='A Neumorphism Vanilla JS Timer, built in OOP paradigm and SVG animation .'
-                    tech={['React', 'Strapi', 'pene']}
-                    githubLink=''
+                    title='Warehouse Management System'
+                    description='A Management sysmtem app. Connect 2 python console app (RR.HH and Warehouse) with main wab page built in .net 5 using RabbitMQ as Router Message queue.'
+                    tech={['.NET', 'Python', 'RabbitMQ', 'SQLSERVER']}
+                    githubLink='https://github.com/alejandroBarraza/maintenance'
+                    externalLink={''}
                 />
             </Grid>
         </Grid>
