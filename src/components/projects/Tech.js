@@ -20,6 +20,7 @@ const ListItemNoPadding = styled(ListItem)(`
 `);
 
 export const Tech = ({ tech, justify }) => {
+    console.log(tech);
     justify
         ? (styles.textContainer.justifyContent = justify)
         : (styles.textContainer.justifyContent = 'flex-end');

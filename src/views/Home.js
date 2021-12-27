@@ -22,7 +22,7 @@ export const Home = () => {
                 <ProjectsView
                     url={'/headlessCms.png'}
                     titleProject={'Aun te espero'}
-                    description='A minimal SPA App. Built with Headless CMS Strapi, React and Graphql for a non profit company Mutual.'
+                    description='A minimal SPA App. Built with Headless CMS Strapi, React, PostgreSQL and Graphql for a non profit company Mutual.'
                     githubLink='https://github.com/'
                     externalLink='https://www.aunteespero.cl/'
                     tech={['React', 'ApolloClient', 'Mui', 'Strapi', 'Graphql', 'PostgreSQL']}
@@ -57,7 +57,6 @@ export const Home = () => {
                 />
                 <SecondProjectView />
             </Container>
-
             <Container maxWidth='md' id='contact'>
                 <Contact />
             </Container>

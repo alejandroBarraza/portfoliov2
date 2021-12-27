@@ -1,10 +1,11 @@
-import { CardContent, Typography, Card, Box, IconButton } from '@mui/material';
 import React from 'react';
+import { CardContent, Typography, Card, Box, IconButton } from '@mui/material';
 import FolderRoundedIcon from '@mui/icons-material/FolderRounded';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
-import { Tech } from '../projects/Tech';
 import { cyan } from '@mui/material/colors';
+import { Tech } from '../projects/Tech';
+
 const styles = {
     cardContainer: {
         background: 'var(--blue-color-secondary)',
@@ -18,7 +19,6 @@ const styles = {
             boxShadow: '1px 1px 6px 1px #055E70',
         },
     },
-
     headerBox: {
         display: 'flex',
         justifyContent: 'space-between',
@@ -33,7 +33,7 @@ const styles = {
     },
 };
 
-export const SecondaryProjects = () => {
+export const SecondaryProjects = ({ title, description, tech }) => {
     return (
         <Card sx={styles.cardContainer}>
             <CardContent>
@@ -55,13 +55,12 @@ export const SecondaryProjects = () => {
                     </IconButton>
                 </Box>
                 <Box sx={styles.textBox}>
-                    <Typography variant='h5'>time to have more fun</Typography>
+                    <Typography variant='h5'>{title}</Typography>
                     <Typography variant='subtitle2' sx={{ color: '#8892b0', py: 2 }}>
-                        A single page web app for helping me choose where to travel, built with
-                        Next.js, Firebase, and Tailwind CSS
+                        {description}
                     </Typography>
                 </Box>
-                <Tech tech={['vuejs', 'react', 'angular']} justify={'flex-start'} />
+                <Tech tech={tech} justify={'flex-start'} />
             </CardContent>
         </Card>
     );
