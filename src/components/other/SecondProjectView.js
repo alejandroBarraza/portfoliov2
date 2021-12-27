@@ -10,6 +10,8 @@ export const SecondProjectView = () => {
                     title='Neumorphism Timer'
                     description='A Neumorphism Vanilla JS Timer, built in OOP paradigm and SVG animation .'
                     tech={['JavaScript', 'CSS']}
+                    githubLink='https://github.com/alejandroBarraza/timer'
+                    externalLink='https://laughing-leavitt-d26ec1.netlify.app/'
                 />
             </Grid>
             <Grid item xs={12} md={4}>
@@ -17,6 +19,7 @@ export const SecondProjectView = () => {
                     title='Neumorphism Timer'
                     description='A Neumorphism Vanilla JS Timer, built in OOP paradigm and SVG animation .'
                     tech={['React', 'Strapi', 'pene']}
+                    githubLink=''
                 />
             </Grid>
             <Grid item xs={12} md={4}>
@@ -24,6 +27,7 @@ export const SecondProjectView = () => {
                     title='Neumorphism Timer'
                     description='A Neumorphism Vanilla JS Timer, built in OOP paradigm and SVG animation .'
                     tech={['React', 'Strapi', 'pene']}
+                    githubLink=''
                 />
             </Grid>
         </Grid>

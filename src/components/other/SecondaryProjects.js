@@ -33,7 +33,7 @@ const styles = {
     },
 };
 
-export const SecondaryProjects = ({ title, description, tech }) => {
+export const SecondaryProjects = ({ title, description, tech, githubLink, externalLink }) => {
     return (
         <Card sx={styles.cardContainer}>
             <CardContent>
@@ -42,7 +42,7 @@ export const SecondaryProjects = ({ title, description, tech }) => {
                         <FolderRoundedIcon fontSize='large' />
                     </Box>
                     <IconButton
-                        href='https://www.google.com'
+                        href={externalLink}
                         target='_blank'
                         rel='noreferrer'
                         sx={{ ml: 'auto' }}
@@ -50,7 +50,7 @@ export const SecondaryProjects = ({ title, description, tech }) => {
                         <LaunchIcon sx={{ color: 'white' }} />
                     </IconButton>
 
-                    <IconButton href='https://www.google.com' target='_blank' rel='noreferrer'>
+                    <IconButton href={githubLink} target='_blank' rel='noreferrer'>
                         <GitHubIcon sx={{ color: 'white' }} />
                     </IconButton>
                 </Box>

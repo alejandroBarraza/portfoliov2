@@ -2,7 +2,7 @@ export const stackTech = [
     {
         id: 1,
         title: 'Front-End',
-        // subtitle: ['JavaScript', 'React', 'Vuejs'],
+        subtitle: ['JavaScript', 'React', 'Vuejs'],
     },
     {
         id: 2,
