@@ -1,12 +1,12 @@
-import { Container } from '@mui/material';
-import React from 'react';
-import { About } from '../components/about/About';
-import { Contact } from '../components/contact/Contact';
-import { Hero } from '../components/hero/Hero';
-import { Navbar } from '../components/navbar/Navbar';
-import { SecondProjectView } from '../components/other/SecondProjectView';
-import { ProjectsView } from '../components/projects/ProjectsView';
-import { Title } from '../components/utils/Title';
+import { Container } from '@mui/material'
+import React from 'react'
+import { About } from '../components/about/About'
+import { Contact } from '../components/contact/Contact'
+import { Hero } from '../components/hero/Hero'
+import { Navbar } from '../components/navbar/Navbar'
+import { SecondProjectView } from '../components/other/SecondProjectView'
+import { ProjectsView } from '../components/projects/ProjectsView'
+import { Title } from '../components/utils/Title'
 
 export const Home = () => {
     return (
@@ -24,30 +24,31 @@ export const Home = () => {
                     titleProject={'Aun te espero'}
                     description='A minimal SPA App. Built with Headless CMS Strapi, React, PostgreSQL and Graphql for a non profit company Mutual.'
                     githubLink='https://github.com/'
-                    externalLink='https://www.aunteespero.cl/'
                     tech={['React', 'ApolloClient', 'Mui', 'Strapi', 'Graphql', 'PostgreSQL']}
                 />
                 <ProjectsView
                     url={
-                        'http://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/06/Data-Scientist-Projects-V2.png'
+                        'https://res.cloudinary.com/dzq3t5xj3/image/upload/c_scale,h_1080,w_1920/v1669041400/Screen_Shot_2022-11-21_at_23.36.07_kyddqa.png'
                     }
-                    titleProject={'Project 2'}
-                    description='A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
-                    and more. Available on Visual Studio Marketplace, Package Control,
-                    Atom Package Manager, and npm'
-                    githubLink='https://github.com/'
-                    externalLink='https://www.google.com/'
-                    tech={['React', 'Strapi', 'pene']}
+                    titleProject={'AuthService'}
+                    description='app for registering with authentication using JWT. It also allows users to log in using
+OAuth2.0 to access Google’s authentication API. Additionally, it allows the reset of passwords making use of the
+Node-mailer service by attaching a link in the email provided.'
+                    githubLink='https://github.com/alejandroBarraza/login-backend'
+                    externalLink='https://login-client-react.herokuapp.com/login'
+                    tech={['React', 'ApolloClient', 'Mui', 'Strapi', 'Graphql', 'PostgreSQL']}
                 />
                 <ProjectsView
-                    url={'https://blog.hotmart.com/blog/2018/04/BLOG_data-science-670x419-1.png'}
-                    titleProject={'Project 3'}
-                    description='A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
-                    and more. Available on Visual Studio Marketplace, Package Control,
-                    Atom Package Manager, and npm'
+                    url={
+                        'https://res.cloudinary.com/dzq3t5xj3/image/upload/c_scale,h_1080,w_1920/v1669042559/Screen_Shot_2022-11-21_at_23.55.10_fpladh.png'
+                    }
+                    titleProject={'Chat App'}
+                    description='pplication that allows one to group people who have the same objectives and affinities, create
+study rooms, ask questions, and follow people with the same affinity. It also allows you to create your own profile
+and customize it.'
                     githubLink='https://github.com/'
                     externalLink='https://www.google.com/'
-                    tech={['React', 'Strapi', 'pene']}
+                    tech={['Django', 'DjangoRest', 'Cloudinary']}
                 />
             </Container>
             <Container maxWidth='md'>
@@ -61,5 +62,5 @@ export const Home = () => {
                 <Contact />
             </Container>
         </Container>
-    );
-};
+    )
+}
