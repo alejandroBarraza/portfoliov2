@@ -1,7 +1,7 @@
-import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
-import { cyan } from '@mui/material/colors';
-import { Link as LinkScroll } from 'react-scroll';
+import React from 'react'
+import { Box, Typography, Button } from '@mui/material'
+import { cyan } from '@mui/material/colors'
+import { Link as LinkScroll } from 'react-scroll'
 
 const styles = {
     ContainerPrimaryLinks: {
@@ -26,7 +26,7 @@ const styles = {
         mr: 0.8,
         color: cyan[500],
     },
-};
+}
 
 export const MenuDesktop = () => {
     return (
@@ -79,10 +79,15 @@ export const MenuDesktop = () => {
             </Box>
 
             <Box sx={styles.ContainerLinks}>
-                <Button variant='outlined' size='sm'>
+                <Button
+                    variant='outlined'
+                    size='sm'
+                    href='https://res.cloudinary.com/dzq3t5xj3/image/upload/v1669282728/FAANGPath_Simple_Template_1_pdwjo7.pdf'
+                    target={'_blank'}
+                >
                     Cv
                 </Button>
             </Box>
         </Box>
-    );
-};
+    )
+}
