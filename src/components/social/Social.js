@@ -1,9 +1,8 @@
-import React from 'react';
-import { SpeedDial, SpeedDialIcon, SpeedDialAction, IconButton } from '@mui/material';
-import { cyan } from '@mui/material/colors';
-import { LinkedIn } from '@mui/icons-material';
-import { Instagram } from '@mui/icons-material';
-import GitHub from '@mui/icons-material/GitHub';
+import React from 'react'
+import { SpeedDial, SpeedDialIcon, SpeedDialAction, IconButton } from '@mui/material'
+import { cyan } from '@mui/material/colors'
+import { LinkedIn } from '@mui/icons-material'
+import GitHub from '@mui/icons-material/GitHub'
 
 const actions = [
     {
@@ -19,26 +18,14 @@ const actions = [
             <IconButton
                 target='_blank'
                 rel='noreferrer'
-                href='https://www.linkedin.com/in/alejandro-barraza-5849a716a/'
+                href='https://www.linkedin.com/in/alejandro-barraza-4133a3255/'
             >
                 <LinkedIn />
             </IconButton>
         ),
         name: 'Linkedin',
     },
-    {
-        icon: (
-            <IconButton
-                target='_blank'
-                rel='noreferrer'
-                href='https://www.instagram.com/alejnbarrazaa/?hl=es'
-            >
-                <Instagram />
-            </IconButton>
-        ),
-        name: 'Instagram',
-    },
-];
+]
 export const Social = () => {
     return (
         <SpeedDial
@@ -58,5 +45,5 @@ export const Social = () => {
                 />
             ))}
         </SpeedDial>
-    );
-};
+    )
+}

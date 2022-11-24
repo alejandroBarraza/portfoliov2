@@ -1,9 +1,9 @@
-import React from 'react';
-import { Box, Typography, CardContent, Card, Link } from '@mui/material';
-import { cyan } from '@mui/material/colors';
-import { Tech } from './Tech';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LaunchIcon from '@mui/icons-material/Launch';
+import React from 'react'
+import { Box, Typography, CardContent, Card, Link } from '@mui/material'
+import { cyan } from '@mui/material/colors'
+import { Tech } from './Tech'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LaunchIcon from '@mui/icons-material/Launch'
 
 const styles = {
     cardContainer: {
@@ -53,7 +53,7 @@ const styles = {
     linkContainer: {
         display: 'flex',
     },
-};
+}
 
 export const CardProjectDekstop = ({
     url,
@@ -93,11 +93,13 @@ export const CardProjectDekstop = ({
                     <Link href={githubLink} target='_blank' rel='noreferrer'>
                         <GitHubIcon sx={{ color: 'common.white' }} />
                     </Link>
-                    <Link href={externalLink} target='_blank' rel='noreferrer' sx={{ pl: 1 }}>
-                        <LaunchIcon sx={{ color: 'common.white' }} />
-                    </Link>
+                    {externalLink && (
+                        <Link href={externalLink} target='_blank' rel='noreferrer' sx={{ pl: 1 }}>
+                            <LaunchIcon sx={{ color: 'common.white' }} />
+                        </Link>
+                    )}
                 </Box>
             </Box>
         </Box>
-    );
-};
+    )
+}
