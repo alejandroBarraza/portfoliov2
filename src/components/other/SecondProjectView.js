@@ -1,10 +1,22 @@
-import { Grid } from '@mui/material';
-import React from 'react';
-import { SecondaryProjects } from './SecondaryProjects';
+import { Grid } from '@mui/material'
+import React from 'react'
+import { SecondaryProjects } from './SecondaryProjects'
 
 export const SecondProjectView = () => {
     return (
         <Grid container spacing={2} alignItems='stretch'>
+            <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
+                <SecondaryProjects
+                    title='Microservices Manage App '
+                    description='Product management application based on microservice architecture. It separates administra-
+tion and authentication from the main application, allowing it to be scaled more easily and work in more isolation.
+Built-in Django for administration and Flask for the main application. Both applications communicate through
+Rabbitmq'
+                    tech={['Django', 'Flask', 'RabbitMQ', 'mySQL']}
+                    githubLink='https://github.com/alejandroBarraza/microservicesPy'
+                    externalLink={''}
+                />
+            </Grid>
             <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
                 <SecondaryProjects
                     title='Neumorphism Timer'
@@ -23,15 +35,6 @@ export const SecondProjectView = () => {
                     externalLink={''}
                 />
             </Grid>
-            <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
-                <SecondaryProjects
-                    title='Warehouse Management System'
-                    description='A Management sysmtem app. Connect 2 python console app (RR.HH and Warehouse) with main wab page built in .net 5 using RabbitMQ as Router Message queue.'
-                    tech={['.NET', 'Python', 'RabbitMQ', 'SQLSERVER']}
-                    githubLink='https://github.com/alejandroBarraza/maintenance'
-                    externalLink={''}
-                />
-            </Grid>
         </Grid>
-    );
-};
+    )
+}

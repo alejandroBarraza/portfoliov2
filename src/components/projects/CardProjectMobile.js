@@ -1,24 +1,25 @@
-import React from 'react';
+import React from 'react'
 
-import { Box, Card, CardContent, Typography, Link } from '@mui/material';
-import { GitHub } from '@mui/icons-material';
-import { cyan } from '@mui/material/colors';
+import { Box, Card, CardContent, Typography, Link } from '@mui/material'
+import { GitHub } from '@mui/icons-material'
+import { cyan } from '@mui/material/colors'
 
-import LaunchIcon from '@mui/icons-material/Launch';
+import LaunchIcon from '@mui/icons-material/Launch'
 
 const styles = {
     cardContainer: {
-        backgroundImage: "url('/project1.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
+        background: 'var(--blue-color-secondary)',
         borderRadius: '10px',
         border: '1px solid #1E4976',
         backdropFilter: 'blur( 4px )',
-        transition: 'transform 0.2s linear',
+        transition: 'transform 0.2s linear, box-shadow 0.2s linear',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
 
         '&:hover': {
             transform: 'scale3d(1.05, 1.05, 1)',
+            boxShadow: '1px 1px 6px 1px #055E70',
         },
     },
     cardOverContainer: {
@@ -35,7 +36,7 @@ const styles = {
         },
         zIndex: '5',
     },
-};
+}
 
 export const CardProjectMobile = ({ titleProject, description, githubLink, externalLink }) => {
     return (
@@ -70,5 +71,5 @@ export const CardProjectMobile = ({ titleProject, description, githubLink, exter
                 </Box>
             </Card>
         </Box>
-    );
-};
+    )
+}

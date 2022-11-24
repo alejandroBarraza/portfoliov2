@@ -1,10 +1,10 @@
-import React from 'react';
-import { CardContent, Typography, Card, Box, IconButton } from '@mui/material';
-import FolderRoundedIcon from '@mui/icons-material/FolderRounded';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LaunchIcon from '@mui/icons-material/Launch';
-import { cyan } from '@mui/material/colors';
-import { Tech } from '../projects/Tech';
+import React from 'react'
+import { CardContent, Typography, Card, Box, IconButton } from '@mui/material'
+import FolderRoundedIcon from '@mui/icons-material/FolderRounded'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LaunchIcon from '@mui/icons-material/Launch'
+import { cyan } from '@mui/material/colors'
+import { Tech } from '../projects/Tech'
 
 const styles = {
     cardContainer: {
@@ -34,7 +34,7 @@ const styles = {
         color: 'white',
         pt: 2,
     },
-};
+}
 
 export const SecondaryProjects = ({ title, description, tech, githubLink, externalLink }) => {
     return (
@@ -44,14 +44,16 @@ export const SecondaryProjects = ({ title, description, tech, githubLink, extern
                     <Box>
                         <FolderRoundedIcon fontSize='large' />
                     </Box>
-                    <IconButton
-                        href={externalLink}
-                        target='_blank'
-                        rel='noreferrer'
-                        sx={{ ml: 'auto' }}
-                    >
-                        <LaunchIcon sx={{ color: 'white' }} />
-                    </IconButton>
+                    {externalLink && (
+                        <IconButton
+                            href={externalLink}
+                            target='_blank'
+                            rel='noreferrer'
+                            sx={{ ml: 'auto' }}
+                        >
+                            <LaunchIcon sx={{ color: 'white' }} />
+                        </IconButton>
+                    )}
 
                     <IconButton href={githubLink} target='_blank' rel='noreferrer'>
                         <GitHubIcon sx={{ color: 'white' }} />
@@ -68,5 +70,5 @@ export const SecondaryProjects = ({ title, description, tech, githubLink, extern
                 </Box>
             </CardContent>
         </Card>
-    );
-};
+    )
+}
